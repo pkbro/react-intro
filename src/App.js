@@ -63,7 +63,7 @@ class App extends Component {
             <GithubProfile username="harrisrobin"></GithubProfile>
           <hr/>
             <GithubSearch></GithubSearch>
-            <GithubSearchForm/>
+            
       </div>
     );
   }

@@ -17,7 +17,7 @@ class GithubSearch extends React.Component {
   render() {
     return (
       <div>
-        
+        <GithubSearchForm onSearch={this._handleSearch}/>
         {this.state.user ? <GithubProfile username={this.state.user}/> : null}
 
       </div>
