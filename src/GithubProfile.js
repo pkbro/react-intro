@@ -29,7 +29,7 @@ class GithubProfile extends React.Component{
     }
 
     componentDidUpdate(prevProps){
-      if(prevProps != this.props.username){
+      if(prevProps.username != this.props.username){
         this.fetchData();
       }
     }
