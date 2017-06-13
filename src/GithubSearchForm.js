@@ -10,7 +10,7 @@ class GithubSearchForm extends React.Component{
 
   render() {
     return (
-      <div >
+      <div>
         <p>Enter a GitHub username:</p>
         <input type="text" ref="userInput"/>
         <button onClick={this._handleSubmit} >Go!</button>

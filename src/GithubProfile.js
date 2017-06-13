@@ -8,7 +8,7 @@ class GithubProfile extends React.Component{
 
     }
 }
-    componentDidMount() {
+    fetchData() {
 
       fetch("https://api.github.com/users/" + this.props.username).then(function(res) {
         console.log(res);
@@ -24,15 +24,15 @@ class GithubProfile extends React.Component{
       })
     }
 
-    // componentDidMount() {
-    //   this.fetchData();
-    // }
+    componentDidMount() {
+      this.fetchData();
+    }
 
-    // componentDidUpdate(){
-    //   if(this.prevProps.username != this.props.username){
-    //     this.fetchData();
-    //   }
-    // }
+    componentDidUpdate(prevProps){
+      if(prevProps != this.props.username){
+        this.fetchData();
+      }
+    }
 
     render(){
       if(this.props.username != null){

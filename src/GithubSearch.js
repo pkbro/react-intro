@@ -11,14 +11,14 @@ class GithubSearch extends React.Component {
   _handleSearch = (searchTerm) => {
     console.log(searchTerm)
     this.setState({
-      user: this.refs.userInput.value
+      user: searchTerm
     })
   }
   render() {
     return (
       <div>
         <GithubSearchForm onSearch={this._handleSearch}/>
-        {this.state.user ? <GithubProfile username={this.state.user}/> : null}
+        {this.state.user  ? <GithubProfile username={this.state.user}/> : null}
 
       </div>
     );
